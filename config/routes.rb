@@ -1,9 +1,9 @@
 Vision2000::Application.routes.draw do
-  get "public_pages/home"
-  get "public_pages/services"
-  get "public_pages/specials"
-  get "public_pages/about"
-  get "public_pages/contact"
+  root 'public_pages#home'
+  match '/services', to: 'public_pages#services', via: 'get'
+  match '/specials', to: 'public_pages#specials', via: 'get'
+  match '/about',    to: 'public_pages#about',    via: 'get'
+  match '/contact',  to: 'public_pages#contact',  via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

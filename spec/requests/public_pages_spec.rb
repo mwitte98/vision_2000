@@ -1,44 +1,46 @@
 require 'spec_helper'
 
 describe "Public pages" do
-  
+
+  subject { page }
+
   describe "Home page" do
 
-  	it "should have the content 'Vision 2000'" do
-  	  visit '/public_pages/home'
-  	  expect(page).to have_content('Vision 2000')
-  	end
+  	before { visit root_path }
+
+  	it { should have_content('Vision 2000') }
+  	it { should have_title(full_title('')) }
   end
 
   describe "Services page" do
 
-  	it "should have the content 'Services'" do
-  	  visit '/public_pages/services'
-  	  expect(page).to have_content('Services')
-  	end
+  	before { visit services_path }
+
+  	it { should have_content('Services') }
+  	it { should have_title(full_title('Services')) }
   end
 
   describe "Specials page" do
 
-  	it "should have the content 'Specials'" do
-  	  visit '/public_pages/specials'
-  	  expect(page).to have_content('Specials')
-  	end
+  	before { visit specials_path }
+
+  	it { should have_content('Specials') }
+  	it { should have_title(full_title('Specials')) }
   end
 
   describe "About page" do
 
-  	it "should have the content 'About'" do
-  	  visit '/public_pages/about'
-  	  expect(page).to have_content('About')
-  	end
+  	before { visit about_path }
+
+  	it { should have_content('About Us') }
+  	it { should have_title(full_title('About Us')) }
   end
 
   describe "Contact page" do
 
-  	it "should have the content 'Contact'" do
-  	  visit '/public_pages/contact'
-  	  expect(page).to have_content('Contact')
-  	end
+  	before { visit contact_path }
+
+  	it { should have_content('Contact Us') }
+  	it { should have_title(full_title('Contact Us')) }
   end
 end
