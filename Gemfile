@@ -10,6 +10,7 @@ gem 'will_paginate', '3.0.5'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'sprockets_better_errors', '~> 0.0.4'
 gem 'sprockets', '<= 2.11.0'
+gem 'bootsy'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
@@ -25,7 +26,7 @@ group :test do
   gem 'selenium-webdriver', '2.40.0'
   gem 'capybara', '2.2.1'
   gem 'factory_girl_rails', '4.4.1'
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', '~> 1.2.0'
   gem 'rb-notifu', '0.0.4'
   # gem 'win32console', '1.3.2'
   gem 'wdm', '0.1.0'

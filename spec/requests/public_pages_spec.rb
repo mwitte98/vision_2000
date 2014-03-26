@@ -43,4 +43,16 @@ describe "Public pages" do
   	it { should have_content('Contact Us') }
   	it { should have_title(full_title('Contact Us')) }
   end
+
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "Services"
+    expect(page).to have_title(full_title('Services'))
+    click_link "Specials"
+    expect(page).to have_title(full_title('Specials'))
+    click_link "About Us"
+    expect(page).to have_title(full_title('About Us'))
+    click_link "Contact Us"
+    expect(page).to have_title(full_title('Contact Us'))
+  end
 end
