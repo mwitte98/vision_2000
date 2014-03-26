@@ -29,6 +29,20 @@ describe "User pages" do
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
+
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by(email: 'mcw9612@rit.edu') }
+
+        it { should have_link('Sign out') }
+        it { should have_title('') }
+        it { should have_selector('div.alert.alert-success', text: 'Successful') }
+
+        describe "followed by signout" do
+          before { click_link "Sign out" }
+          it { should_not have_link('Sign out') }
+        end
+      end
     end
   end
 end
