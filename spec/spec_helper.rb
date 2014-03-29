@@ -39,6 +39,11 @@ Spork.prefork do
 
     config.before(:each) do
       DatabaseCleaner.start
+      PublicPage.create!(name: "Vision 2000", content: "Vision 2000")
+      PublicPage.create!(name: "Services", content: "Services")
+      PublicPage.create!(name: "Specials", content: "Specials")
+      PublicPage.create!(name: "About Us", content: "About Us")
+      PublicPage.create!(name: "Contact Us", content: "Contact Us")
     end
 
     config.after(:each) do

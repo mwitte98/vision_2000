@@ -1,6 +1,5 @@
 Vision2000::Application.routes.draw do
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
-  resources :users,    only: [:new, :create]
+  resources :users,    only: [:new, :create, :edit]
   resources :sessions, only: [:new, :create, :destroy]
   root 'public_pages#home'
   match '/services', to: 'public_pages#services', via: 'get'
