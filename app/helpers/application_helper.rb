@@ -8,4 +8,18 @@ module ApplicationHelper
   	  "#{base_title} | #{page_title}"
   	end
   end
+
+  def page_name
+    if params[:name].nil?
+      search_for = params[:public_page][:name]
+    else
+      search_for = params[:name].camelize
+    end
+    if search_for == 'About'
+      search_for = 'About Us'
+    elsif search_for == 'Contact'
+      search_for = 'Contact Us'
+    end
+    return search_for
+  end
 end

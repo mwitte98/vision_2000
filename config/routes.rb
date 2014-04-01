@@ -1,12 +1,14 @@
 Vision2000::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  resources :users,    only: [:new, :create, :edit]
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :users,        only: [:new, :create, :edit]
+  resources :sessions,     only: [:new, :create, :destroy]
+  resources :public_pages, only: [:show, :edit, :update]
   root 'public_pages#home'
   match '/signup',   to: 'users#new',             via: 'get'
   match '/signin',   to: 'sessions#new',          via: 'get'
   match '/signout',  to: 'sessions#destroy',      via: 'delete'
   get ':name' => 'public_pages#show'
+  get ':name/edit' => 'public_pages#edit'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
