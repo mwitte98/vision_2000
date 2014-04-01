@@ -14,7 +14,7 @@ describe "Public pages" do
 
   describe "Services page" do
 
-  	before { visit services_path }
+  	before { visit '/services' }
 
   	it { should have_content('Services') }
   	it { should have_title(full_title('Services')) }
@@ -22,7 +22,7 @@ describe "Public pages" do
 
   describe "Specials page" do
 
-  	before { visit specials_path }
+  	before { visit '/specials' }
 
   	it { should have_content('Specials') }
   	it { should have_title(full_title('Specials')) }
@@ -30,7 +30,7 @@ describe "Public pages" do
 
   describe "About page" do
 
-  	before { visit about_path }
+  	before { visit '/about' }
 
   	it { should have_content('About Us') }
   	it { should have_title(full_title('About Us')) }
@@ -38,7 +38,7 @@ describe "Public pages" do
 
   describe "Contact page" do
 
-  	before { visit contact_path }
+  	before { visit '/contact' }
 
   	it { should have_content('Contact Us') }
   	it { should have_title(full_title('Contact Us')) }

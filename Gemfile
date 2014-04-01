@@ -10,6 +10,8 @@ gem 'will_paginate', '3.0.5'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'sprockets_better_errors', '~> 0.0.4'
 gem 'sprockets', '<= 2.11.0'
+gem 'ckeditor'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'

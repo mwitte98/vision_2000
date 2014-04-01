@@ -1,27 +1,21 @@
 class PublicPagesController < ApplicationController
+
+  def show
+    search_for = params[:name].camelize
+    if search_for == 'About'
+      search_for = 'About Us'
+    elsif search_for == 'Contact'
+      search_for = 'Contact Us'
+    end
+    @public_page = PublicPage.find_by(name: search_for)
+    if @public_page.nil?
+      flash.now[:danger] = 'That page does not exist'
+      redirect_to root_path
+    end
+  end
   
   def home
     @public_page = PublicPage.find_by(name: "Vision 2000")
-  end
-
-  def services
-    @public_page = PublicPage.find_by(name: "Services")
-  end
-
-  def specials
-    @public_page = PublicPage.find_by(name: "Specials")
-  end
-
-  def about
-    @public_page = PublicPage.find_by(name: "About Us")
-  end
-
-  def contact
-    @public_page = PublicPage.find_by(name: "Contact Us")
-  end
-
-  def new
-    @public_page = PublicPage.new
   end
 
   def create
