@@ -56,7 +56,7 @@ namespace :db do
     	- Well, who wouldn't find this vivid textured violet irresistible? I'm Brazil Nuts Over You - And I'm crazy
     	for this textured matte pink What's a Little Rain Forest? - I've got this textured matte blue and an umbrella
     	for two. You're So Flippy Floppy - When I found this bright textured yellow, I just flipped!")
-    PublicPage.create!(name: "About Us", content: "Darlene Witte has been the owner of Vision 2000 and Sunburst Tanning
+    PublicPage.create!(name: "About", content: "Darlene Witte has been the owner of Vision 2000 and Sunburst Tanning
     	for over 18 years. She has been a Licensed Hair Stylist and Nail Technician for over 24 years. She worked at
     	Vision 2000 and Sunburst Tanning for 6 years before purchasing the business from the previous owners. She is
     	married to Bruce Witte with 2 sons - Matthew, 18 and Shawn, 16. She is a member of the Medina Business Association
@@ -69,7 +69,7 @@ namespace :db do
         If you or someone you know are looking to start their career or make a change please stop by Vision 2000 to fill
         out an application. All applications are strictly confidential. You can also e-mail me your resume to
         dwitte1@rochester.rr.com. 521 Main St. Medina 585-798-4810 Mon-Fri 8am-8pm and Sat 8am-4pm")
-    PublicPage.create!(name: "Contact Us", content: "Phone:	585-798-4810 585-798-4600 Fax:	585-798-4600 Hours:
+    PublicPage.create!(name: "Contact", content: "Phone:	585-798-4810 585-798-4600 Fax:	585-798-4600 Hours:
     	Monday-Friday 8AM-8PM Saturday 8AM-4PM Walk in service when available or call ahead for an appointment. We gladly
     	accept Visa, Mastercard, Discover, and debit cards. Email Address: dwitte1@rochester.rr.com")
   end

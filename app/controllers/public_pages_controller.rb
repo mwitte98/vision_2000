@@ -22,7 +22,11 @@ class PublicPagesController < ApplicationController
     @public_page = PublicPage.find(params[:id])
     if @public_page.update_attributes(page_params)
       flash.now[:success] = "The page has been successfully updated!"
-      render 'show'
+      if @public_page.id == 1
+        redirect_to root_path
+      else
+        redirect_to "/#{@public_page.name.downcase}"
+      end
     else
       flash[:danger] = "Unsuccessful page update"
       render 'edit'
