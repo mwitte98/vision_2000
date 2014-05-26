@@ -3,6 +3,8 @@
   	About Us
   <% elsif @public_page.name.html_safe == "Contact" %>
   	Contact Us
+  <% elsif @public_page.name.html_safe == "Vision 2000" %>
+  	Vision 2000 & Sunburst Tanning
   <% else %>
   	<%= @public_page.name.html_safe %>
   <% end %>
