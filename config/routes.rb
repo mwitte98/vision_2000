@@ -1,6 +1,6 @@
 Vision2000::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  resources :users,        only: [:new, :create, :edit]
+  resources :users,        only: [:new, :create, :update, :edit]
   resources :sessions,     only: [:new, :create, :destroy]
   resources :public_pages, only: [:show, :edit, :update]
   root 'public_pages#home'
