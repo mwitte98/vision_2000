@@ -1,4 +1,5 @@
 class PublicPagesController < ApplicationController
+  before_action :signed_in_user, only: [:edit, :update, :create]
 
   def show
     if params[:id].nil?
@@ -51,6 +52,15 @@ class PublicPagesController < ApplicationController
 
     def page_params
       params.require(:public_page).permit(:name, :content)
+    end
+
+    # Before filters
+
+    def signed_in_user
+      unless signed_in?
+        flash[:warning] = "You must be signed in to access that page."
+        redirect_to root_url
+      end
     end
 
 end

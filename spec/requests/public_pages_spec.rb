@@ -53,4 +53,19 @@ describe "Public pages" do
     click_link "Contact Us"
     expect(page).to have_content('Contact Us')
   end
+
+  describe "authorization" do
+    
+    describe "for non-signed-in users" do
+      let(:user) { FactoryGirl.create(:user) }
+
+      describe "in the PublicPages controller" do
+
+        describe "visiting the edit page" do
+          before { visit '/services/edit' }
+          it { should have_title('Vision 2000 & Sunburst Tanning') }
+        end
+      end
+    end
+  end
 end
