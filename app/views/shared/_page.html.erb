@@ -1,13 +1,66 @@
-<h1>
-  <% if @public_page.name.html_safe == "About" %>
-  	About Us
-  <% elsif @public_page.name.html_safe == "Contact" %>
-  	Contact Us
-  <% elsif @public_page.name.html_safe == "Vision 2000" %>
-  	Vision 2000 & Sunburst Tanning
-  <% else %>
-  	<%= @public_page.name.html_safe %>
-  <% end %>
-</h1>
+<% if @public_page.name.html_safe == "About" %>
+  <h1>About Us</h1>
+<% elsif @public_page.name.html_safe == "Contact" %>
+  <h1>Contact Us</h1>
+<% elsif @public_page.name.html_safe == "Vision 2000" %>
+  <h1>Vision 2000 & Sunburst Tanning</h1>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://i.imgur.com/4KRCrEu.jpg" alt="Slide 1">
+        <div class="carousel-caption">
+          <p>1</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/IEISH5Y.jpg" alt="Slide 2">
+        <div class="carousel-caption">
+          <p>2</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/hM37Sm0.jpg" alt="Slide 3">
+        <div class="carousel-caption">
+          <p>3</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/BzNQBXJ.jpg" alt="Slide 4">
+        <div class="carousel-caption">
+          <p>4</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/Qq1TMQR.jpg" alt="Slide 5">
+        <div class="carousel-caption">
+          <p>5</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://i.imgur.com/LhKCucD.jpg" alt="Slide 6">
+        <div class="carousel-caption">
+          <p>6</p>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+<% else %>
+  <h1><%= @public_page.name.html_safe %></h1>
+<% end %>
 
 <%= @public_page.content.html_safe %>
