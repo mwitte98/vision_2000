@@ -1,9 +1,13 @@
 <% if @public_page.name.html_safe == "About" %>
+  <% provide(:title, "About Us") %>
   <h1>About Us</h1>
 <% elsif @public_page.name.html_safe == "Contact" %>
+  <% provide(:title, "Contact Us") %>
   <h1>Contact Us</h1>
 <% elsif @public_page.name.html_safe == "Vision 2000" %>
+  <% provide(:title, '') %>
   <h1>Vision 2000 & Sunburst Tanning</h1>
+  <h2>Family Hair Care Salon & Tanning Center</h2>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -47,6 +51,7 @@
   </div>
   <br>
 <% else %>
+  <% provide(:title, @public_page.name.html_safe) %>
   <h1><%= @public_page.name.html_safe %></h1>
 <% end %>
 
