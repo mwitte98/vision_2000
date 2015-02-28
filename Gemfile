@@ -13,6 +13,7 @@ gem 'sprockets', '<= 2.11.0'
 gem 'ckeditor', '4.0.11'
 gem 'paperclip'
 gem 'non-stupid-digest-assets', '~>1.0.4'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3', '1.3.9'
