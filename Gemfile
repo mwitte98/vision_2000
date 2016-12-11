@@ -12,6 +12,7 @@ gem 'non-stupid-digest-assets', '~> 1.0.4'
 gem 'sass-rails', '~> 5.0.6'
 gem 'jquery-rails', '~> 4.2.1'
 gem 'turbolinks', '~> 5.0.1'
+gem 'uglifier', '~> 3.0', '>= 3.0.4'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.9'
