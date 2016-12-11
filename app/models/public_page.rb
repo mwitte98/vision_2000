@@ -1,4 +1,4 @@
-class PublicPage < ActiveRecord::Base
+class PublicPage < ApplicationRecord
   validates :name,    presence: true
   validates :content, presence: true
 end
