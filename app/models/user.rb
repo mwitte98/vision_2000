@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   def certain_email
     lower_email = email.downcase
-    return if (lower_email != 'dwitte1@rochester.rr.com') && (lower_email != 'mcw9612@rit.edu')
+    return unless (lower_email != 'dwitte1@rochester.rr.com') && (lower_email != 'mcw9612@rit.edu')
     errors.add(:email, 'doesn\'t have permission to sign up for this site')
   end
 
