@@ -1,0 +1,44 @@
+---
+version: "2"
+checks:
+  method-lines:
+    config:
+      threshold: 26
+engines:
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  reek:
+    enabled: true
+  rubocop:
+    enabled: true
+  scss-lint:
+    enabled: true
+ratings:
+  paths:
+  - config.ru
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - "**.erb"
+  - "**.rb"
+  - "**.css"
+  - "**.js"
+  - "**.scss"
+exclude_paths:
+- 'bin/**/*'
+- 'coverage/**/*'
+- 'tmp/**/*'
+- 'vendor/**/*'
+- 'db/**/*'

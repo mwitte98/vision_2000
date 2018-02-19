@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def page_name
     name = params[:name]
     search_for = name.nil? ? params[:public_page][:name] : name.camelize

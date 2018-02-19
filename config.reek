@@ -1,0 +1,16 @@
+InstanceVariableAssumption:
+  enabled: false
+IrresponsibleModule:
+  enabled: false
+NilCheck:
+  enabled: false
+TooManyStatements:
+  max_statements: 7
+UncommunicativeModuleName:
+  accept:
+    - !ruby/regexp /Vision2000/
+UtilityFunction:
+  enabled: false
+
+exclude_paths:
+  - db/

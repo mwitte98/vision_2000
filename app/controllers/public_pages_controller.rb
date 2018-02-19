@@ -1,5 +1,5 @@
 class PublicPagesController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update, :create]
+  before_action :signed_in_user, only: %i[edit update create]
 
   def show
     id = params[:id]
@@ -57,5 +57,4 @@ class PublicPagesController < ApplicationController
     flash[:warning] = 'You must be signed in to access that page.'
     redirect_to root_url
   end
-
 end
